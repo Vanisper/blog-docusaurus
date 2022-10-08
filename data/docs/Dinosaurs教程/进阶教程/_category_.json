@@ -1,0 +1,8 @@
+{
+  "position": 3,
+  "label": "进阶教程",
+  "link": {
+    "type": "doc",
+    "id": "README"
+  }
+}
