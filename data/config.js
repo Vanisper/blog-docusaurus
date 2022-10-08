@@ -21,6 +21,11 @@ const navbarItems = [
     activeBaseRegex: "^/$",
   },
   {
+    to: "/liveCode",
+    label: "在线代码",
+    position: "right",
+  },
+  {
     type: "dropdown",
     label: "教学",
     position: "right",
@@ -39,6 +44,11 @@ const navbarItems = [
     label: "远程工作",
     position: "right",
     className: "navicon dianya-icon",
+  },
+  {
+    to: "/about",
+    label: "关于",
+    position: "right",
   },
 ];
 

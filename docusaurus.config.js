@@ -10,6 +10,7 @@ const config = {
   ...siteOptions,
   presets: require(path.join(__dirname, "./config/presets")),
   themeConfig: require(path.join(__dirname, "./config/theme")),
+  plugins: require(path.join(__dirname, "./config/plugins")),
   i18n: {
     defaultLocale: "zh-Hans",
     locales: ["zh-Hans", "en"],
