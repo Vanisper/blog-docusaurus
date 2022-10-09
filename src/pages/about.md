@@ -2,7 +2,7 @@
 id: about
 title: 关于我
 description: 自我介绍
-hide_table_of_contents: true
+hide_table_of_contents: false
 ---
 
 import useBaseUrl from "@docusaurus/useBaseUrl";
@@ -61,8 +61,10 @@ import ThemedImage from "@theme/ThemedImage";
 
 ### 💬 联系我
 
-📢 RSS [订阅本站](https://feedly.com/i/subscription/feed/https://kuizuo.cn/rss.xml)
-
 🐧 QQ：[273266469](http://wpa.qq.com/msgrd?v=3&uin=273266469&site=qq&menu=yes)
 
 📮 邮箱: [273266469@qq.com](mailto:273266469@qq.com)
+
+### 📢 订阅本站
+
+RSS：[订阅本站](https://feedly.com/i/subscription/feed/https://kuizuo.cn/rss.xml)

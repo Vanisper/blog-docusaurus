@@ -19,7 +19,6 @@ import { DockItem } from "@site/src/types";
 import { useDeepCompareMemo } from "@site/src/utils";
 
 import $styles from "./style.module.css";
-console.log($styles);
 
 // eslint-disable-next-line react/no-unused-prop-types
 const DockBtn: FC<DockItem & { id: string }> = (item) => {
@@ -80,6 +79,7 @@ export const Dock: FC<{ data: DockItem[] }> = ({ data }) => {
   const [show, setShow] = useState<boolean>(false);
   const toggle = useCallback(() => setShow((state) => !state), []);
   const responsive = useResponsive();
+
   const resp = ExecutionEnvironment.canUseDOM && responsive;
   const isLg = resp && responsive.lg;
   const ref = useRef<HTMLDivElement | null>(null);
@@ -103,7 +103,10 @@ export const Dock: FC<{ data: DockItem[] }> = ({ data }) => {
     <div className={$styles.dock} style={style}>
       <div className={clsx($styles.controlBtn)} onClick={toggle}>
         <span className="xicon">
-          <ControlIcon />
+          <ControlIcon
+            color="#f7c80c"
+            filter="drop-shadow(3px 5px 2px #f7d00cc9)"
+          />
         </span>
       </div>
       <div className={$styles.container} ref={ref}>

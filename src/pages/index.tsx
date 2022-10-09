@@ -9,6 +9,8 @@ import styles from "./index.module.css";
 import PageBlender from "../components/PageBlender";
 import { Dock } from "../components/Dock";
 import { dockItems } from "@site/data/site/common";
+import { Carousel } from "../components/Carousel";
+import { carousels } from "@site/data/site/carousels";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -36,6 +38,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout title={`欢迎来到 ${siteConfig.title}`} description="页面描述">
       <Dock data={dockItems} />
+      <Carousel data={carousels} />
       <HomepageHeader />
       <main>
         <HomepageFeatures />

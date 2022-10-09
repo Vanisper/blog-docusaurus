@@ -1,9 +1,10 @@
 @import "tailwindcss/base";
 @import "./tailwind/base.css";
-@import "tailwindcss/components";
-@import "./tailwind/components.css";
-@import "tailwindcss/utilities";
-@import "./tailwind/utilities.css";
+/* @import "tailwindcss/components"; */
+/* @import "./tailwind/components.css"; */
+/* @import "tailwindcss/utilities"; */
+/* @import "./tailwind/utilities.css"; */
+@import "./icons.css";
 
 :root {
   --ifm-background-color: #fafffa;
@@ -29,12 +30,16 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
-
+/* 适配一下自己做的夜间模式组件,这样做之后颜色反相只会对文字有影响,因为图片颜色反相之后会很奇怪 */
 img,
 svg {
   isolation: isolate !important;
 }
-
+/* 顶部navbar */
+.dropdown__link {
+  width: 100%;
+  justify-content: center;
+}
 .xicon {
   display: inline-flex;
   width: 1em;

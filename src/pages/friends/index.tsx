@@ -30,13 +30,14 @@ function FriendHeader() {
 
 function FriendCards() {
   const friends = sortFriend();
+
   return (
     <section className="margin-top--lg margin-bottom--lg">
       <div className="container">
         <ul className={styles.showcaseList}>
-          {friends.map((friend) => (
-            <FriendCard key={friend.title} friend={friend} />
-          ))}
+          {friends.map((friend) => {
+            return <FriendCard key={friend.title} friend={friend} />;
+          })}
         </ul>
       </div>
     </section>

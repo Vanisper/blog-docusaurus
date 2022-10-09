@@ -20,18 +20,18 @@ export interface DockItem {
   onClick?: (props: DockItem) => void;
 }
 
-export interface LinkType {
+export interface Website {
   name: string;
-  logo: string;
+  logo?: string | { default: () => string };
   desc?: string;
   href: string;
-  target?: string;
-}
-export interface LinkCategory {
-  name: string;
-  links: LinkType[];
+  tags?: string[];
 }
 
+export interface WebsiteCategory {
+  name: string;
+  websites: Website[];
+}
 export interface CourseCardItemType {
   name: string;
   href: string;

@@ -10,27 +10,34 @@ h1 {
 } */
 
 @layer base {
-    h1 {
-        @apply tw-text-3xl;
-    }
-
-    h2 {
-        @apply tw-text-2xl;
-    }
-
-    h3 {
-        @apply tw-text-xl;
-    }
-
-    h4 {
-        @apply tw-text-lg;
-    }
-
-    h5 {
-        @apply tw-text-sm;
-    }
-
-    h6 {
-        @apply tw-text-xs;
-    }
+  /* 这个tw的默认样式会影响到内嵌在超链接内、和文字并排的组件显示效果，现去除 */
+  svg,
+  img {
+    display: inline-block; /* 1 */
+    vertical-align: initial; /* 2 */
+  }
+  blockquote,
+  dl,
+  dd,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  figure,
+  p,
+  pre {
+    margin: revert;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: revert;
+    font-weight: revert;
+  }
 }

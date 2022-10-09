@@ -14,11 +14,16 @@ const sidebars = {
 // 导航栏
 const navbarItems = [
   {
-    to: "/",
-    label: "主页",
+    to: "/blog",
+    label: "博客",
     position: "right",
     className: "navicon home-icon",
     activeBaseRegex: "^/$",
+  },
+  {
+    to: "/website",
+    label: "导航",
+    position: "right",
   },
   {
     to: "/liveCode",
@@ -30,25 +35,44 @@ const navbarItems = [
     label: "教学",
     position: "right",
     className: "navicon course-icon",
-    items: [],
+    items: [
+      {
+        type: "docSidebar",
+        label: "Dinosaurs教程",
+        sidebarId: "tutorialSidebar",
+        className: "navicon docusaurus-icon",
+      },
+    ],
   },
   {
-    type: "docSidebar",
-    label: "Dinosaurs教程",
+    type: "dropdown",
+    label: "接单",
     position: "right",
-    sidebarId: "tutorialSidebar",
+    className: "navicon works-icon",
+    items: [
+      {
+        href: "https://eleduck.com/",
+        label: "远程工作",
+        className: "navicon dianya-icon",
+      },
+    ],
   },
-  { to: "/blog", label: "博客", position: "right" },
+
   {
-    href: "https://eleduck.com/",
-    label: "远程工作",
+    type: "dropdown",
+    label: "其他",
     position: "right",
-    className: "navicon dianya-icon",
-  },
-  {
-    to: "/about",
-    label: "关于",
-    position: "right",
+    className: "navicon coffee-icon",
+    items: [
+      {
+        to: "/about",
+        label: "关于",
+      },
+      {
+        to: "/friends",
+        label: "友链",
+      },
+    ],
   },
 ];
 

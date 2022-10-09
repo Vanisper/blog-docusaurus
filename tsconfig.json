@@ -34,5 +34,5 @@
       "@site/*": ["./*"]
     }
   },
-  "include": ["./src", "./data/site", "./data/demo", "./typings"]
+  "include": ["./src", "./data/site", "./src/**/*.ts", "./typings"]
 }

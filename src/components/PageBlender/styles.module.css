@@ -1,8 +1,12 @@
+:root {
+  --blender-pos-h: 1rem;
+  --blender-pos-v: 5rem;
+}
 .blender {
   height: 3rem;
   width: 3rem;
-  left: 1rem;
-  bottom: 1rem;
+  right: var(--blender-pos-h);
+  bottom: var(--blender-pos-v);
   border-radius: 50%;
   transition: transform 0.7s ease-out;
 
@@ -21,8 +25,8 @@
   position: fixed;
   height: 3rem;
   width: 3rem;
-  left: 1rem;
-  bottom: 1rem;
+  right: var(--blender-pos-h);
+  bottom: var(--blender-pos-v);
   border-radius: 50%;
   background-position: center;
   background-size: cover;

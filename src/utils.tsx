@@ -2,6 +2,33 @@ import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
 import useRouteContext from "@docusaurus/useRouteContext";
 import { DependencyList, useEffect, useMemo, useRef, useState } from "react";
 import { dequal } from "dequal";
+
+/**
+ * ping一下主机，检测是否能够连接
+ * @param host 主机名
+ */
+export const pingHost = (host: string) => {
+  let img = new Image();
+  let start = new Date();
+  img.src = host;
+  let flag = false; //无法访问
+  img.onload = function () {
+    flag = true;
+  };
+  img.onerror = function () {
+    flag = true;
+  };
+  let timer = setTimeout(function () {
+    if (!flag) {
+      //如果真的无法访问
+      flag = false;
+      clearTimeout(timer);
+    }
+  }, 1500);
+
+  return flag;
+};
+
 /**
  * 生成一个区间之间的随机数(含最大值，含最小值)
  * @param min 最小值

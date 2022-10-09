@@ -1,7 +1,12 @@
 .dock {
-  --md-translate-y: 0;
-  --control-display: none;
-  --control-rotate: rotate(0);
+  --lg-translate-y: 0;
+  --control-display: block;
+  --control-rotate: rotate(45deg);
+  @screen lg {
+    --md-translate-y: 0;
+    --control-display: none;
+    --control-rotate: rotate(0);
+  }
 
   @apply tw-fixed
                tw-flex-col
@@ -11,7 +16,7 @@
                tw-left-1/2
                tw--translate-x-1/2
                tw-translate-y-[var(--lg-translate-y)]
-               tw-z-[calc(var(--rf-base-modal-z-index)-2)]
+               tw-z-[1]
                tw-transition-transform
                tw-w-full
                tw-items-center
@@ -43,10 +48,6 @@
       @apply tw-hidden;
     }
     transform: var(--control-rotate);
-
-    & svg {
-      filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 90%));
-    }
   }
 }
 
